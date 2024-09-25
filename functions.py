@@ -7,18 +7,6 @@ harmonics = {'E': [82.41, 164.82, 247.23, 329.64, 412.05],
              'B': [246.94, 493.88, 740.82, 987.76, 1234.7], 
              'High E': [329.63, 659.26, 988.89, 1318.52, 1648.15]}
 
-def slice(y, loudest_time):
-
-    length = len(y)
-
-    start = int(length*(loudest_time-0.125))
-    if start - length*0.25 < 0:
-        start = 0
-
-    end = int(start + length*0.25)
-
-    return y[start:end]
-
 def guess_string(fundamental_frequency):
     
     if 70 <= fundamental_frequency < 100:

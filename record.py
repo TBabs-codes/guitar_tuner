@@ -2,7 +2,7 @@ import pyaudio
 import wave
 
 
-def record_wav(length_of_recording, filename):
+def record_wav(length_of_recording, filename): #Creates a wav file using computers microphone
     FRAMES_PER_BUFFER = 3200
     FORMAT = pyaudio.paInt16
     CHANNELS = 1

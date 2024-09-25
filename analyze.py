@@ -17,7 +17,7 @@ def find_frequency_and_string(filename):
     # Find the index of the loudest sound
 
     # Compute the FFT
-    # y = slice(y, loudest_time)
+    
     N = len(y)
     yf = fft(y)
     xf = fftfreq(N, 1 / sr)
@@ -46,17 +46,14 @@ def find_frequency_and_string(filename):
 
     #Find fundamental frequency and guess string
     fund_freq = find_fundamental_freq(xf, yf)
-    # print("I'm a computer and I know music, you plucked the ", guess_string(fund_freq))
-    # print("The fundamental frequency found is: ", fund_freq)
-    # sys.stdout.flush()
+    
 
 
 
     #ACTUAL AMPLITUDE VS. FREQUENCY
     # plt.plot(xf, yf)
     # plt.show()
-    print(len(xf))
+    
     return fund_freq, guess_string(fund_freq)
 
 
-# find_frequency_and_string('./guitar_strings/B_string.wav')
